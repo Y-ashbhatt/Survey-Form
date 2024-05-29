@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1 id="title">New Employee Information Form</h1>
+    <p id="description">Please fill out this form with the required information</p>
+
+    <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div class="form-group">
+                <label id="name-label" for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age</label>
+                <input type="number" id="number" name="age" placeholder="Enter your age" min="18" max="60" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Employment Details</legend>
+            <div class="form-group">
+                <label for="profile-picture">Upload a profile picture</label>
+                <input id="profile-picture" type="file" name="file">
+            </div>
+            <div class="form-group">
+                <label for="dropdown">Department</label>
+                <select id="dropdown" name="department" required>
+                    <option value="">Select your department</option>
+                    <option value="hr">HR</option>
+                    <option value="finance">Finance</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="it">IT</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Employment Type</label>
+                <input type="radio" name="employment-type" value="full-time" required> Full-Time
+                <input type="radio" name="employment-type" value="part-time"> Part-Time
+                <input type="radio" name="employment-type" value="contract"> Contract
+            </div>
+            <div class="form-group">
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" name="comments"
+                    placeholder="Enter any additional information here..."></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Acknowledgments</legend>
+            <div class="form-group">
+                <label for="Policies-and-Procedures">
+                    <input type="checkbox" id="Policies-and-Procedures" name="Acknowledgments"
+                        value="Policies-and-Procedures" required>
+                    I acknowledge that I have read and understand the company's policies and procedures.
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="confidentiality-Agreement">
+                    <input type="checkbox" id="confidentiality-Agreement" name="Acknowledgments"
+                        value="confidentiality-Agreement" required>
+                    I agree to abide by the company's confidentiality agreement.
+                </label>
+            </div>
+        </fieldset>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
